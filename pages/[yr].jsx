@@ -1,8 +1,17 @@
-import Head from 'next/head';
-import { GetStaticProps, getStaticPaths } from 'next';
+import { getStaticProps, getStaticPaths } from 'next';
 import prisma from '../db/prisma';
 
-
+function Year({ yearList }) {
+  return (
+    <div>
+      <ul>
+        {yearList.map(({ date, venue }) => (
+          <li>{date} | {venue.site}{venue.school ? ` - ${venue.school}` : ""} | {venue.city}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 export function getStaticPaths() {
   // Define range of years to show 
