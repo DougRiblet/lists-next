@@ -4,6 +4,10 @@
   "private": true,
   "author": "Douglas Riblet <dougriblet98@gmail.com>",
   "description": "set lists site",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DougRiblet/lists-next.git"
+  },
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
