@@ -1,0 +1,78 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Show {
+  id      String   @id
+  date    String   @unique @db.VarChar(7)
+  venueId String
+  note    String[]
+  tuning  String[]
+  theme   String[]
+  guest   String[]
+  layout  Layout?  @default(S1_S2)
+  Venue   Venue    @relation(fields: [venueId], references: [id])
+  Track   Track[]
+}
+
+model Song {
+  id         String       @id
+  title      String       @unique
+  aka        String[]
+  source     Source       @default(ORIGINAL)
+  Track      Track[]
+  Songwriter Songwriter[]
+}
+
+model Songwriter {
+  id        String  @id
+  fullname  String  @unique
+  shortname String?
+  Song      Song[]
+}
+
+model Track {
+  id        String   @id
+  position  String   @db.Char(3)
+  songTitle String
+  showDate  String   @db.VarChar(7)
+  arrow     Boolean  @default(false)
+  reprise   Boolean? @default(false)
+  Show      Show     @relation(fields: [showDate], references: [date])
+  Song      Song     @relation(fields: [songTitle], references: [title])
+}
+
+model Venue {
+  id     String  @id
+  site   String
+  city   String
+  school String?
+  Show   Show[]
+
+  @@unique([site, city], name: "site_city")
+}
+
+enum Layout {
+  S1_S2
+  S1_S2_S3
+  S1_PN_S2
+  S1_S2_PN_S3
+  S1_PN_S2_S3
+  S1_PNS2
+  S1_PNS2_S3
+  AC_S1_S2
+  S1
+  S1_S2_DY
+  S1_DY
+}
+
+enum Source {
+  ORIGINAL
+  COVER
+  TRADITIONAL
+}
