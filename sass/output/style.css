@@ -1,0 +1,12 @@
+body {
+  margin: 24px;
+}
+body .container {
+  width: 800px;
+  margin: 24px auto;
+}
+body .container ul, body .container li {
+  text-align: left;
+}
+
+/*# sourceMappingURL=style.css.map */

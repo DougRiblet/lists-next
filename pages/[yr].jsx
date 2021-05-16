@@ -1,40 +1,37 @@
-import { getStaticProps, getStaticPaths } from 'next';
 import prisma from '../db/prisma';
 
 function Year({ yearList }) {
   return (
-    <div>
+    <div className="container">
       <ul>
-        {yearList.map(({ date, venue }) => (
-          <li>{date} | {venue.site}{venue.school ? ` - ${venue.school}` : ""} | {venue.city}</li>
+        {yearList.map(({ date, Venue }) => (
+          <li>{date} | {Venue.site}{Venue.school ? ` - ${Venue.school}` : ""} | {Venue.city}</li>
         ))}
       </ul>
     </div>
   );
 }
 
-export function getStaticPaths() {
+export async function getStaticPaths() {
   // Define range of years to show 
-  const yrs = [...Array(25).keys()].map(i => i + 71);
-
-  const paths = yrs.map((yr) => ({
-    params: { id: yr },
+  const yrs = [...Array(25).keys()].map(i => String(i + 71));
+  const paths = yrs.map((yeer) => ({
+    params: { yr: yeer },
   }));
 
   return { paths, fallback: false };
 };
 
 export async function getStaticProps({ params }) {
-
   const res = await prisma.show.findMany({
     where: {
       date: {
-        startsWith: args.year,
+        startsWith: params.yr,
       },
     },
     select: {
       date: true,
-      venue: {
+      Venue: {
         select: {
           city: true,
           site: true,
@@ -43,7 +40,10 @@ export async function getStaticProps({ params }) {
       },
     },
   });
-  const yearList = await res.json();
 
-  return { props: { yearList } };
+  res.sort((a, b) => a.date - b.date);
+
+  return { props: { yearList: res } };
 };
+
+export default Year;
