@@ -1,19 +1,15 @@
 import prisma from '../../db/prisma';
+import handleSetList from '../../utils/handleSetList';
+import formatSets from '../../utils/formatSets';
 
-function Show({ show }) {
+function Show({ date, site, city, school, layout, sets }) {
   return (
     <div className="container">
-      <p>{show.date}</p>
-      <p>{show.Venue.site}{show.Venue.school ? ` - ${show.Venue.school}` : ""}</p>
-      <p>{show.Venue.city}</p>
+      <p>{date}</p>
+      <p>{site}{school ? ` - ${school}` : ""}</p>
+      <p>{city}</p>
       <hr />
-      <ul>
-        {show.Track.map((track) => {
-          return <li key={track.position}>
-            {track.position} {track.songTitle} {track.arrow ? ">" : ""}
-          </li>
-        })}
-      </ul>
+      {formatSets(layout, sets)}
     </div>
   );
 }
@@ -63,14 +59,18 @@ export async function getStaticProps({ params }) {
     },
   });
 
-  res.Track.sort((a, b) => {
-    let comparison = 0;
-    if (a.position > b.position) { comparison = 1 }
-    else if (a.position < b.position) { comparison = -1 }
-    return comparison;
-  });
+  const setsObj = handleSetList(res.Track);
 
-  return { props: { show: res } };
+  const props = {
+    date: res.date,
+    site: res.Venue.site,
+    school: res.Venue.school,
+    city: res.Venue.city,
+    layout: res.layout,
+    sets: setsObj,
+  };
+
+  return { props };
 };
 
 export default Show;
