@@ -13,7 +13,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "sass": "sass sass/style.scss sass/output/style.css"
+    "sass": "sass sass/style.scss sass/output/style.css",
+    "lint": "eslint --ext .jsx,.js utils pages db"
   },
   "license": "ISC",
   "dependencies": {
