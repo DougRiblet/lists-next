@@ -2,11 +2,16 @@ import prisma from '../../db/prisma';
 import handleSetList from '../../utils/handleSetList';
 import formatSets from '../../utils/formatSets';
 
-function Show({ date, site, city, school, layout, sets }) {
+function Show({
+  date, site, city, school, layout, sets,
+}) {
   return (
     <div className="container">
       <p>{date}</p>
-      <p>{site}{school ? ` - ${school}` : ""}</p>
+      <p>
+        {site}
+        {school ? ` - ${school}` : ''}
+      </p>
       <p>{city}</p>
       <hr />
       {formatSets(layout, sets)}
@@ -23,7 +28,7 @@ export async function getStaticPaths() {
     },
     select: {
       date: true,
-    }
+    },
   });
 
   const paths = showdates.map((showdate) => ({
@@ -31,7 +36,7 @@ export async function getStaticPaths() {
   }));
 
   return { paths, fallback: false };
-};
+}
 
 export async function getStaticProps({ params }) {
   const res = await prisma.show.findUnique({
@@ -71,6 +76,6 @@ export async function getStaticProps({ params }) {
   };
 
   return { props };
-};
+}
 
 export default Show;
