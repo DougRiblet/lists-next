@@ -8,10 +8,29 @@ body {
     ul, li  {
       text-align: left;
     }
+    .showhead {
+      background-color: darkgreen;
+      color: white;
+      font-size: 14px;
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 20px;
+      padding: 12px 24px;
+      .showdate {
+        text-align: left;
+      }
+      .showvenue {
+        text-align: center;
+      }
+      .showcity {
+        text-align: right;
+      }
+    }
     .container-sets {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
+      padding: 12px 24px;
       .setcol {
         p.set-header {
           font-style: italic;

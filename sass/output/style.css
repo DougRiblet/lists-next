@@ -10,10 +10,29 @@ body .container {
 body .container ul, body .container li {
   text-align: left;
 }
+body .container .showhead {
+  background-color: darkgreen;
+  color: white;
+  font-size: 14px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+  padding: 12px 24px;
+}
+body .container .showhead .showdate {
+  text-align: left;
+}
+body .container .showhead .showvenue {
+  text-align: center;
+}
+body .container .showhead .showcity {
+  text-align: right;
+}
 body .container .container-sets {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  padding: 12px 24px;
 }
 body .container .container-sets .setcol p.set-header {
   font-style: italic;

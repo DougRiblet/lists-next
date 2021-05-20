@@ -8,16 +8,25 @@ datasource db {
 }
 
 model Show {
-  id      String   @id
-  date    String   @unique @db.VarChar(7)
-  venueId String
-  note    String[]
-  tuning  String[]
-  theme   String[]
-  guest   String[]
-  layout  Layout?  @default(S1_S2)
-  Venue   Venue    @relation(fields: [venueId], references: [id])
-  Track   Track[]
+  id       String   @id
+  date     String   @unique @db.VarChar(7)
+  venueId  String
+  note     String[]
+  tuning   String[]
+  theme    String[]
+  guest    String[]
+  layout   Layout?    @default(S1_S2)
+  shape    String?   
+  setshape Setshape?  @relation(fields: [shape], references: [setmod])
+  Venue    Venue      @relation(fields: [venueId], references: [id])
+  Track    Track[]
+}
+
+model Setshape {
+  id      String  @id @default(uuid())
+  comment String?
+  setmod  String  @unique
+  shows   Show[]
 }
 
 model Song {

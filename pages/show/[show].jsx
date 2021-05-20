@@ -7,13 +7,18 @@ function Show({
 }) {
   return (
     <div className="container">
-      <p>{date}</p>
-      <p>
-        {site}
-        {school ? ` - ${school}` : ''}
-      </p>
-      <p>{city}</p>
-      <hr />
+      <div className="showhead">
+        <div className="showdate">
+          {date}
+        </div>
+        <div className="showvenue">
+          {site}
+          {school ? ` - ${school}` : ''}
+        </div>
+        <div className="showcity">
+          {city}
+        </div>
+      </div>
       {formatSets(layout, sets)}
     </div>
   );
@@ -45,11 +50,7 @@ export async function getStaticProps({ params }) {
     },
     select: {
       date: true,
-      Setshape: {
-        select: {
-          setmod: true,
-        },
-      },
+      shape: true,
       Venue: {
         select: {
           city: true,
@@ -75,7 +76,7 @@ export async function getStaticProps({ params }) {
     site: res.Venue.site,
     school: res.Venue.school,
     city: res.Venue.city,
-    layout: res.layout,
+    layout: res.shape,
     sets: setsObj,
   };
 
