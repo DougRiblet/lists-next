@@ -45,7 +45,11 @@ export async function getStaticProps({ params }) {
     },
     select: {
       date: true,
-      layout: true,
+      Setshape: {
+        select: {
+          setmod: true,
+        },
+      },
       Venue: {
         select: {
           city: true,
