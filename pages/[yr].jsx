@@ -1,4 +1,3 @@
-import React from 'react';
 import prisma from '../db/prisma';
 
 function Year({ yearList }) {
@@ -25,9 +24,9 @@ function Year({ yearList }) {
 
 export async function getStaticPaths() {
   // Define range of years to show
-  const yrs = [...Array(25).keys()].map((i) => String(i + 71));
-  const paths = yrs.map((yeer) => ({
-    params: { yr: yeer },
+  const yrs = [...Array(28).keys()].map((i) => String(i + 68));
+  const paths = yrs.map((yr) => ({
+    params: { yr },
   }));
 
   return { paths, fallback: false };

@@ -42,6 +42,7 @@ function formatSets(layout, sets) {
       </div>
     );
   }
+  return <div className="container-sets">placeholder</div>;
 }
 
 export default formatSets;
