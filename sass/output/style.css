@@ -8,7 +8,6 @@ body .container {
   margin: 24px auto;
 }
 body .container ul {
-  margin-left: 100px;
   text-align: left;
   list-style-type: none;
 }
@@ -56,6 +55,9 @@ body .container .container-sets .setcol ul {
 }
 body .container .container-sets .setcol ul li {
   line-height: 1.5;
+}
+body .container .container-sets .setcol ul.encore-list {
+  margin-top: 30px;
 }
 body .home-years {
   width: 700px;
