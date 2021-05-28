@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import PropTypes from 'prop-types';
 import prisma from '../db/prisma';
 
@@ -9,15 +10,20 @@ function Year({ yearList }) {
           date, city, site, school,
         }) => (
           <li>
-            {date}
-            {' '}
-            |
-            {' '}
-            {site}
-            {school ? ` - ${school}` : ''}
-            {' '}
-            |
-            {city}
+            <Link href={`/show/${date}`}>
+              <a>
+                {date}
+                {' '}
+                |
+                {' '}
+                {site}
+                {school ? ` - ${school}` : ''}
+                {' '}
+                |
+                {' '}
+                {city}
+              </a>
+            </Link>
           </li>
         ))}
       </ul>

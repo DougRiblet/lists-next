@@ -7,8 +7,20 @@ body .container {
   width: 1000px;
   margin: 24px auto;
 }
-body .container ul, body .container li {
+body .container ul {
+  margin-left: 100px;
   text-align: left;
+  list-style-type: none;
+}
+body .container ul li {
+  line-height: 1.5;
+}
+body .container ul li a {
+  color: darkgreen;
+  text-decoration: none;
+}
+body .container ul li a:hover {
+  color: forestgreen;
 }
 body .container .showhead {
   background-color: darkgreen;
@@ -44,6 +56,29 @@ body .container .container-sets .setcol ul {
 }
 body .container .container-sets .setcol ul li {
   line-height: 1.5;
+}
+body .home-years {
+  width: 700px;
+  margin: 24px auto;
+}
+body .home-years ul {
+  margin: 10px;
+  list-style-type: none;
+}
+body .home-years ul li a {
+  display: block;
+  float: left;
+  padding: 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  color: white;
+  background-color: forestgreen;
+  text-decoration: none;
+}
+body .home-years ul li a:hover {
+  background-color: teal;
 }
 
 /*# sourceMappingURL=style.css.map */

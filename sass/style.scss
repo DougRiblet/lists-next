@@ -5,8 +5,20 @@ body {
   .container {
     width: 1000px;
     margin: 24px auto;
-    ul, li  {
+    ul {
+      margin-left: 100px;
       text-align: left;
+      list-style-type: none;
+      li {
+        line-height: 1.5;
+        a {
+          color: darkgreen;
+          text-decoration: none;
+          &:hover {
+            color: forestgreen;
+          }
+        }
+      }
     }
     .showhead {
       background-color: darkgreen;
@@ -42,6 +54,29 @@ body {
           li {
             line-height: 1.5;
           }
+        }
+      }
+    }
+  }
+  .home-years {
+    width: 700px;
+    margin: 24px auto;
+    ul{
+      margin: 10px;
+      list-style-type: none;
+      li a {
+        display: block;
+        float: left;
+        padding: 20px;
+        margin: 10px;
+        border: none;
+        border-radius: 50%;
+        font-size: 24px;
+        color: white;
+        background-color: forestgreen;
+        text-decoration: none;
+        &:hover {
+          background-color: teal;
         }
       }
     }

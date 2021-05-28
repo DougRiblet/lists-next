@@ -7,7 +7,7 @@ function HomePage() {
     <div className="home-years">
       <ul>
         {yrs.map((yr) => (
-          <li>
+          <li key={yr}>
             <Link href={`/${yr}`}>
               <a>{yr}</a>
             </Link>
