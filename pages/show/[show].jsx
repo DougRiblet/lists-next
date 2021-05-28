@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import prisma from '../../db/prisma';
 import handleSetList from '../../utils/handleSetList';
 import formatSets from '../../utils/formatSets';
@@ -23,6 +24,16 @@ function Show({
     </div>
   );
 }
+
+Show.propTypes = {
+  date: PropTypes.string.isRequired,
+  site: PropTypes.string.isRequired,
+  city: PropTypes.string.isRequired,
+  school: PropTypes.string.isRequired,
+  layout: PropTypes.string.isRequired,
+  /* eslint-disable-next-line react/forbid-prop-types */
+  sets: PropTypes.object.isRequired,
+};
 
 export async function getStaticPaths() {
   const showdates = await prisma.show.findMany({
@@ -74,7 +85,7 @@ export async function getStaticProps({ params }) {
   const props = {
     date: res.date,
     site: res.Venue.site,
-    school: res.Venue.school,
+    school: res.Venue.school || '',
     city: res.Venue.city,
     layout: res.shape,
     sets: setsObj,

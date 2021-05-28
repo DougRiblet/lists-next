@@ -1,26 +1,40 @@
+import PropTypes from 'prop-types';
 import prisma from '../db/prisma';
 
 function Year({ yearList }) {
   return (
     <div className="container">
       <ul>
-        {yearList.map(({ date, Venue }) => (
+        {yearList.map(({
+          date, city, site, school,
+        }) => (
           <li>
             {date}
             {' '}
             |
             {' '}
-            {Venue.site}
-            {Venue.school ? ` - ${Venue.school}` : ''}
+            {site}
+            {school ? ` - ${school}` : ''}
             {' '}
             |
-            {Venue.city}
+            {city}
           </li>
         ))}
       </ul>
     </div>
   );
 }
+
+Year.propTypes = {
+  yearList: PropTypes.arrayOf(
+    PropTypes.shape({
+      date: PropTypes.string.isRequired,
+      site: PropTypes.string.isRequired,
+      school: PropTypes.string.isRequired,
+      city: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+};
 
 export async function getStaticPaths() {
   // Define range of years to show
@@ -53,7 +67,14 @@ export async function getStaticProps({ params }) {
 
   res.sort((a, b) => a.date - b.date);
 
-  return { props: { yearList: res } };
+  const yearList = res.map((obj) => ({
+    date: obj.date,
+    city: obj.Venue.city,
+    site: obj.Venue.site,
+    school: obj.Venue.school || '',
+  }));
+
+  return { props: { yearList } };
 }
 
 export default Year;
