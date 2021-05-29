@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import Head from 'next/head';
 import prisma from '../../db/prisma';
 import handleSetList from '../../utils/handleSetList';
 import formatSets from '../../utils/formatSets';
@@ -8,6 +9,17 @@ function Show({
 }) {
   return (
     <div className="container">
+      <Head>
+        <title>
+          Grateful Dead set list | {date} | {city}
+        </title>
+        <meta charset="UTF-8" />
+        <meta
+          property="og:title"
+          content={`Grateful Dead set list | ${date} | ${city}`}
+          key="title"
+        />
+      </Head>
       <div className="showhead">
         <div className="showdate">
           {date}

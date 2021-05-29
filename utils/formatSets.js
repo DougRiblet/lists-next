@@ -32,8 +32,7 @@ function formatSets(layout, sets) {
                   </li>
                 ))}
               </ul>
-            )
-          }
+            )}
         </div>
       </div>
     );
@@ -61,11 +60,10 @@ function formatSets(layout, sets) {
                   </li>
                 ))}
               </ul>
-            )
-          }
+            )}
         </div>
       </div>
-    )
+    );
   }
 
   if (layout === 'S1_S2_S3' || layout === 'BD_S1_S2') {
@@ -110,8 +108,7 @@ function formatSets(layout, sets) {
                   </li>
                 ))}
               </ul>
-            )
-          }
+            )}
         </div>
       </div>
     );
@@ -126,7 +123,7 @@ function formatSets(layout, sets) {
           </p>
         </div>
       </div>
-    )
+    );
   }
 
   if (layout === 'S1_DY') {
@@ -161,11 +158,10 @@ function formatSets(layout, sets) {
                   </li>
                 ))}
               </ul>
-            )
-          }
+            )}
         </div>
       </div>
-    )
+    );
   }
 
   if (layout === 'S1_S2_DY') {
@@ -210,11 +206,10 @@ function formatSets(layout, sets) {
                   </li>
                 ))}
               </ul>
-            )
-          }
+            )}
         </div>
       </div>
-    )
+    );
   }
 
   if (layout === 'JB_S1') {
@@ -249,8 +244,7 @@ function formatSets(layout, sets) {
                   </li>
                 ))}
               </ul>
-            )
-          }
+            )}
         </div>
       </div>
     );
@@ -298,8 +292,7 @@ function formatSets(layout, sets) {
                   </li>
                 ))}
               </ul>
-            )
-          }
+            )}
         </div>
       </div>
     );
@@ -392,8 +385,7 @@ function formatSets(layout, sets) {
                   </li>
                 ))}
               </ul>
-            )
-          }
+            )}
         </div>
       </div>
     );
@@ -441,8 +433,7 @@ function formatSets(layout, sets) {
                   </li>
                 ))}
               </ul>
-            )
-          }
+            )}
         </div>
       </div>
     );
@@ -470,7 +461,7 @@ function formatSets(layout, sets) {
               </li>
             ))}
           </ul>
-          <ul style={{ marginTop: "30px" }}>
+          <ul style={{ marginTop: '30px' }}>
             {sets['2'].map((track) => (
               <li key={track.position}>
                 {track.songTitle}
@@ -498,8 +489,7 @@ function formatSets(layout, sets) {
                   </li>
                 ))}
               </ul>
-            )
-          }
+            )}
         </div>
       </div>
     );
@@ -527,7 +517,7 @@ function formatSets(layout, sets) {
               </li>
             ))}
           </ul>
-          <ul style={{ marginTop: "30px" }}>
+          <ul style={{ marginTop: '30px' }}>
             {sets['n'].map((track) => (
               <li key={track.position}>
                 {track.songTitle}
@@ -555,8 +545,7 @@ function formatSets(layout, sets) {
                   </li>
                 ))}
               </ul>
-            )
-          }
+            )}
         </div>
       </div>
     );
@@ -594,8 +583,7 @@ function formatSets(layout, sets) {
                   </li>
                 ))}
               </ul>
-            )
-          }
+            )}
         </div>
       </div>
     );
@@ -643,8 +631,7 @@ function formatSets(layout, sets) {
                   </li>
                 ))}
               </ul>
-            )
-          }
+            )}
         </div>
       </div>
     );
@@ -664,7 +651,7 @@ function formatSets(layout, sets) {
           </ul>
         </div>
         <div className="setcol">
-          <p/>
+          <p />
         </div>
         <div className="setcol">
           <ul>
