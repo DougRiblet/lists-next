@@ -9,7 +9,7 @@ function Year({ yearList }) {
         {yearList.map(({
           date, city, site, school,
         }) => (
-          <li>
+          <li key={date}>
             <Link href={`/show/${date}`}>
               <a>
                 {date}
@@ -71,7 +71,13 @@ export async function getStaticProps({ params }) {
     },
   });
 
-  res.sort((a, b) => a.date - b.date);
+  // res.sort((a, b) => a.date - b.date);
+  res.sort((a, b) => {
+    if (a.date.slice(0,6) > b.date.slice(0,6)) { return 1 }
+    if (a.date.slice(0,6) < b.date.slice(0,6)) { return -1 }
+    if (a.date.slice(6) > b.date.slice(6)) { return 1 }
+    if (a.date.slice(6) < b.date.slice(6)) { return -1 }
+  });
 
   const yearList = res.map((obj) => ({
     date: obj.date,

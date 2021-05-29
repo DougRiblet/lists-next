@@ -6,7 +6,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['1'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -16,7 +16,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['2'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -26,7 +26,7 @@ function formatSets(layout, sets) {
             && (
               <ul className="encore-list">
                 {sets.e.map((track) => (
-                  <li>
+                  <li key={track.position}>
                     {track.songTitle}
                     {track.arrow ? ' >' : ''}
                   </li>
@@ -45,7 +45,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['1'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -55,7 +55,7 @@ function formatSets(layout, sets) {
             && (
               <ul className="encore-list">
                 {sets.e.map((track) => (
-                  <li>
+                  <li key={track.position}>
                     {track.songTitle}
                     {track.arrow ? ' >' : ''}
                   </li>
@@ -74,7 +74,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['1'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -84,7 +84,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['2'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -94,7 +94,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['3'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -104,7 +104,7 @@ function formatSets(layout, sets) {
             && (
               <ul className="encore-list">
                 {sets.e.map((track) => (
-                  <li>
+                  <li key={track.position}>
                     {track.songTitle}
                     {track.arrow ? ' >' : ''}
                   </li>
@@ -135,7 +135,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['1'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -145,7 +145,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['2'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -155,7 +155,7 @@ function formatSets(layout, sets) {
             && (
               <ul className="encore-list">
                 {sets.e.map((track) => (
-                  <li>
+                  <li key={track.position}>
                     {track.songTitle}
                     {track.arrow ? ' >' : ''}
                   </li>
@@ -174,7 +174,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['1'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -184,7 +184,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['2'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -194,7 +194,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['y'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -204,7 +204,7 @@ function formatSets(layout, sets) {
             && (
               <ul className="encore-list">
                 {sets.e.map((track) => (
-                  <li>
+                  <li key={track.position}>
                     {track.songTitle}
                     {track.arrow ? ' >' : ''}
                   </li>
@@ -223,7 +223,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['1'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -233,7 +233,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['2'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -243,7 +243,7 @@ function formatSets(layout, sets) {
             && (
               <ul className="encore-list">
                 {sets.e.map((track) => (
-                  <li>
+                  <li key={track.position}>
                     {track.songTitle}
                     {track.arrow ? ' >' : ''}
                   </li>
@@ -262,7 +262,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['1'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -272,7 +272,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['z'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -282,7 +282,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['2'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -292,7 +292,7 @@ function formatSets(layout, sets) {
             && (
               <ul className="encore-list">
                 {sets.e.map((track) => (
-                  <li>
+                  <li key={track.position}>
                     {track.songTitle}
                     {track.arrow ? ' >' : ''}
                   </li>
@@ -311,7 +311,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['z'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -321,7 +321,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['1'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -331,7 +331,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['2'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -339,7 +339,7 @@ function formatSets(layout, sets) {
           </ul>
           <ul className="encore-list">
             {sets['3'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -356,7 +356,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['a'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -366,7 +366,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['1'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -376,7 +376,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['2'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -386,7 +386,7 @@ function formatSets(layout, sets) {
             && (
               <ul className="encore-list">
                 {sets.e.map((track) => (
-                  <li>
+                  <li key={track.position}>
                     {track.songTitle}
                     {track.arrow ? ' >' : ''}
                   </li>
@@ -405,7 +405,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['1'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -415,7 +415,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['n'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -425,7 +425,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['2'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -435,7 +435,7 @@ function formatSets(layout, sets) {
             && (
               <ul className="encore-list">
                 {sets.e.map((track) => (
-                  <li>
+                  <li key={track.position}>
                     {track.songTitle}
                     {track.arrow ? ' >' : ''}
                   </li>
@@ -454,7 +454,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['1'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -464,7 +464,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['n'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -472,7 +472,7 @@ function formatSets(layout, sets) {
           </ul>
           <ul style={{ marginTop: "30px" }}>
             {sets['2'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -482,7 +482,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['3'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -492,7 +492,7 @@ function formatSets(layout, sets) {
             && (
               <ul className="encore-list">
                 {sets.e.map((track) => (
-                  <li>
+                  <li key={track.position}>
                     {track.songTitle}
                     {track.arrow ? ' >' : ''}
                   </li>
@@ -511,7 +511,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['1'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -521,7 +521,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['2'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -529,7 +529,7 @@ function formatSets(layout, sets) {
           </ul>
           <ul style={{ marginTop: "30px" }}>
             {sets['n'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -539,7 +539,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['3'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -549,7 +549,7 @@ function formatSets(layout, sets) {
             && (
               <ul className="encore-list">
                 {sets.e.map((track) => (
-                  <li>
+                  <li key={track.position}>
                     {track.songTitle}
                     {track.arrow ? ' >' : ''}
                   </li>
@@ -568,7 +568,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['1'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -578,7 +578,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['2'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -588,7 +588,7 @@ function formatSets(layout, sets) {
             && (
               <ul className="encore-list">
                 {sets.e.map((track) => (
-                  <li>
+                  <li key={track.position}>
                     {track.songTitle}
                     {track.arrow ? ' >' : ''}
                   </li>
@@ -607,7 +607,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['1'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -617,7 +617,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['2'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -627,7 +627,7 @@ function formatSets(layout, sets) {
         <div className="setcol">
           <ul>
             {sets['3'].map((track) => (
-              <li>
+              <li key={track.position}>
                 {track.songTitle}
                 {track.arrow ? ' >' : ''}
               </li>
@@ -637,7 +637,7 @@ function formatSets(layout, sets) {
             && (
               <ul className="encore-list">
                 {sets.e.map((track) => (
-                  <li>
+                  <li key={track.position}>
                     {track.songTitle}
                     {track.arrow ? ' >' : ''}
                   </li>
@@ -645,6 +645,36 @@ function formatSets(layout, sets) {
               </ul>
             )
           }
+        </div>
+      </div>
+    );
+  }
+
+  if (layout === 'S1_UNK_S3') {
+    return (
+      <div className="container-sets">
+        <div className="setcol">
+          <ul>
+            {sets['1'].map((track) => (
+              <li key={track.position}>
+                {track.songTitle}
+                {track.arrow ? ' >' : ''}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="setcol">
+          <p/>
+        </div>
+        <div className="setcol">
+          <ul>
+            {sets['3'].map((track) => (
+              <li key={track.position}>
+                {track.songTitle}
+                {track.arrow ? ' >' : ''}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     );
