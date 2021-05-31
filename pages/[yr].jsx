@@ -10,7 +10,7 @@ function Year({ yearList, year }) {
         <title>
           Grateful Dead {year} concert list
         </title>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta
           property="og:title"
           content={`Grateful Dead ${year} concert list`}

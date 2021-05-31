@@ -8,17 +8,17 @@ datasource db {
 }
 
 model Show {
-  id       String   @id
-  date     String   @unique @db.VarChar(7)
+  id       String    @id
+  date     String    @unique @db.VarChar(7)
   venueId  String
   note     String[]
   tuning   String[]
   theme    String[]
   guest    String[]
-  layout   Layout?    @default(S1_S2)
-  shape    String?   
-  setshape Setshape?  @relation(fields: [shape], references: [setmod])
-  Venue    Venue      @relation(fields: [venueId], references: [id])
+  shape    String?   @default("S1_S2")
+  archtop  String?
+  setshape Setshape? @relation(fields: [shape], references: [setmod])
+  Venue    Venue     @relation(fields: [venueId], references: [id])
   Track    Track[]
 }
 
@@ -64,20 +64,6 @@ model Venue {
   Show   Show[]
 
   @@unique([site, city], name: "site_city")
-}
-
-enum Layout {
-  S1_S2
-  S1_S2_S3
-  S1_PN_S2
-  S1_S2_PN_S3
-  S1_PN_S2_S3
-  S1_PNS2
-  S1_PNS2_S3
-  AC_S1_S2
-  S1
-  S1_S2_DY
-  S1_DY
 }
 
 enum Source {

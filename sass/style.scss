@@ -86,3 +86,11 @@ body {
     }
   }
 }
+
+.archive {
+  border-top: 2px solid darkgreen;
+  margin-top: 24px;
+  padding-top: 24px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}

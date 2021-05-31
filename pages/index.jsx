@@ -15,7 +15,7 @@ function HomePage() {
           content="Grateful Dead set lists"
           key="title"
         />
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
       </Head>
       <ul>
         {yrs.map((yr) => (
