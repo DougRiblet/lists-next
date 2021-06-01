@@ -50,7 +50,7 @@ function Show({
           {archtop && archtop.length > 1
             && (
             <iframe
-              src={`https://archive.org/embed/${archtop}&playlist=1`}
+              src={`https://archive.org/embed/${archtop}&playlist=1&list_height=114`}
               width="500"
               height="300"
               frameBorder="0"
