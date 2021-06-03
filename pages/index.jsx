@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Head from 'next/head';
+import Navbar from '../utils/Navbar';
 
 const yrs = [...Array(28).keys()].map((i) => String(i + 68));
 
@@ -17,6 +18,7 @@ function HomePage() {
         />
         <meta charSet="UTF-8" />
       </Head>
+      <Navbar />
       <ul>
         {yrs.map((yr) => (
           <li key={yr}>
