@@ -16,6 +16,7 @@ body .container {
 body .container ul {
   text-align: left;
   list-style-type: none;
+  margin-bottom: 60px;
 }
 body .container ul li {
   line-height: 1.5;
@@ -67,7 +68,12 @@ body .container .container-sets .setcol ul.encore-list {
 }
 body .home-years {
   width: 700px;
-  margin: 24px auto;
+  margin: 24px auto 200px;
+}
+body .home-years:before, body .home-years:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 body .home-years ul {
   margin: 10px;
@@ -98,18 +104,14 @@ body .home-years ul li a:hover {
   grid-template-columns: 1fr 2fr;
 }
 
-header {
-  margin: 0;
-  padding: 0;
-}
-
-nav {
+header, footer {
   margin: 0;
   padding: 0;
   width: 100%;
   background-color: #333955;
 }
-nav .nbar {
+
+.nbar {
   max-width: 1000px;
   margin: 0 auto;
   padding: 12px 60px;
@@ -117,12 +119,21 @@ nav .nbar {
   font-size: 24px;
   text-align: right;
 }
-nav .nbar a {
+.nbar a {
   color: white;
   text-decoration: none;
 }
-nav .nbar .logo-ql {
+.nbar .logo-ql {
   color: crimson;
+}
+
+.fbar {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 12px 60px;
+  color: #bbbbbb;
+  font-size: 12px;
+  text-align: left;
 }
 
 /*# sourceMappingURL=style.css.map */

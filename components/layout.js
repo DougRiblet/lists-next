@@ -8,27 +8,27 @@ export default function Layout({ children, home }) {
         <meta charSet="UTF-8" key="charset" />
       </Head>
       <header>
-        <nav>
-          {home ? (
-            <div className="nbar">
-              Dead<span className="logo-ql">QL</span>
-            </div>
-          ) : (
-            <div className="nbar">
-              <Link href="/">
-                <a>
-                  Dead<span className="logo-ql">QL</span>
-                </a>
-              </Link>
-            </div>
-          )}
-        </nav>
+        {home ? (
+          <div className="nbar">
+            Dead<span className="logo-ql">QL</span>
+          </div>
+        ) : (
+          <div className="nbar">
+            <Link href="/">
+              <a>
+                Dead<span className="logo-ql">QL</span>
+              </a>
+            </Link>
+          </div>
+        )}
       </header>
       <main>
         {children}
       </main>
       <footer>
-
+        <div className="fbar">
+          Not affiliated with the Grateful Dead organization in any way.
+        </div>
       </footer>
     </div>
   );

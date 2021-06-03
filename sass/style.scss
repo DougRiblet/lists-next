@@ -18,6 +18,7 @@ body {
     ul {
       text-align: left;
       list-style-type: none;
+      margin-bottom: 60px;
       li {
         line-height: 1.5;
         a {
@@ -72,7 +73,12 @@ body {
   }
   .home-years {
     width: 700px;
-    margin: 24px auto;
+    margin: 24px auto 200px;
+    &:before, &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
     ul{
       margin: 10px;
       list-style-type: none;
@@ -104,28 +110,34 @@ body {
   grid-template-columns: 1fr 2fr;
 }
 
-header {
-  margin: 0;
-  padding: 0;
-}
-nav{
+header, footer {
   margin: 0;
   padding: 0;
   width: 100%;
   background-color: #333955;
-  .nbar {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 12px 60px;
+}
+
+.nbar {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 12px 60px;
+  color: white;
+  font-size: 24px;
+  text-align: right;
+  a {
     color: white;
-    font-size: 24px;
-    text-align: right;
-    a {
-      color: white;
-      text-decoration: none;
-    }
-    .logo-ql {
-      color: $dq-red;
-    }
+    text-decoration: none;
   }
+  .logo-ql {
+    color: $dq-red;
+  }
+}
+
+.fbar {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 12px 60px;
+  color: #bbbbbb;
+  font-size: 12px;
+  text-align: left;
 }
