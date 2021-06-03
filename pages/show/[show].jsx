@@ -4,12 +4,13 @@ import Link from 'next/link';
 import prisma from '../../db/prisma';
 import handleSetList from '../../utils/handleSetList';
 import formatSets from '../../utils/formatSets';
+import Layout from '../../components/layout';
 
 function Show({
   date, site, city, school, layout, archtop, sets,
 }) {
   return (
-    <div className="container">
+    <Layout>
       <Head>
         <title>
           Grateful Dead set list | {date} | {city}
@@ -20,48 +21,50 @@ function Show({
           key="title"
         />
       </Head>
-      <div className="showhead">
-        <div className="showdate">
-          {date}
+      <div className="container">
+        <div className="showhead">
+          <div className="showdate">
+            {date}
+          </div>
+          <div className="showvenue">
+            {site}
+            {school ? ` - ${school}` : ''}
+          </div>
+          <div className="showcity">
+            {city}
+          </div>
         </div>
-        <div className="showvenue">
-          {site}
-          {school ? ` - ${school}` : ''}
-        </div>
-        <div className="showcity">
-          {city}
-        </div>
-      </div>
-      {formatSets(layout, sets)}
-      <div className="archive">
-        <div className="allcopies">
-          <Link
-            href={`https://archive.org/details/GratefulDead?and[]=date:19${date.slice(0, 2)}-${date.slice(2, 4)}-${date.slice(4, 6)}`}
-          >
-            <a
-              aria-label="Check all copies of this show on the Archive"
+        {formatSets(layout, sets)}
+        <div className="archive">
+          <div className="allcopies">
+            <Link
+              href={`https://archive.org/details/GratefulDead?and[]=date:19${date.slice(0, 2)}-${date.slice(2, 4)}-${date.slice(4, 6)}`}
             >
-              Check all copies of this show on the Archive
-            </a>
-          </Link>
-        </div>
-        <div className="playlist">
-          {archtop && archtop.length > 1
-            && (
-            <iframe
-              src={`https://archive.org/embed/${archtop}&playlist=1&list_height=114`}
-              width="500"
-              height="300"
-              frameBorder="0"
-              webkitallowfullscreen="true"
-              mozallowfullscreen="true"
-              allowFullScreen
-              title={`Grateful Dead concert 19${date.slice(0, 2)}-${date.slice(3, 4)}-${date.slice(5, 6)}`}
-            />
-            )}
+              <a
+                aria-label="Check all copies of this show on the Archive"
+              >
+                Check all copies of this show on the Archive
+              </a>
+            </Link>
+          </div>
+          <div className="playlist">
+            {archtop && archtop.length > 1
+              && (
+              <iframe
+                src={`https://archive.org/embed/${archtop}&playlist=1&list_height=114`}
+                width="500"
+                height="300"
+                frameBorder="0"
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true"
+                allowFullScreen
+                title={`Grateful Dead concert 19${date.slice(0, 2)}-${date.slice(3, 4)}-${date.slice(5, 6)}`}
+              />
+              )}
+          </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 }
 

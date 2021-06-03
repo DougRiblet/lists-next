@@ -3,10 +3,11 @@ import Head from 'next/head';
 import PropTypes from 'prop-types';
 import prisma from '../db/prisma';
 import yrs from '../utils/defineYears';
+import Layout from '../components/layout';
 
 function Year({ yearList, year }) {
   return (
-    <div className="container">
+    <Layout>
       <Head>
         <title>
           Grateful Dead {year} concert list
@@ -17,29 +18,31 @@ function Year({ yearList, year }) {
           key="title"
         />
       </Head>
-      <ul>
-        {yearList.map(({
-          date, city, site, school,
-        }) => (
-          <li key={date}>
-            <Link href={`/show/${date}`}>
-              <a>
-                {date}
-                {' '}
-                |
-                {' '}
-                {site}
-                {school ? ` - ${school}` : ''}
-                {' '}
-                |
-                {' '}
-                {city}
-              </a>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+      <div className="container">
+        <ul>
+          {yearList.map(({
+            date, city, site, school,
+          }) => (
+            <li key={date}>
+              <Link href={`/show/${date}`}>
+                <a>
+                  {date}
+                  {' '}
+                  |
+                  {' '}
+                  {site}
+                  {school ? ` - ${school}` : ''}
+                  {' '}
+                  |
+                  {' '}
+                  {city}
+                </a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </Layout>
   );
 }
 
