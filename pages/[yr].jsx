@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
 import prisma from '../db/prisma';
+import yrs from '../utils/defineYears';
 
 function Year({ yearList, year }) {
   return (
@@ -10,7 +11,6 @@ function Year({ yearList, year }) {
         <title>
           Grateful Dead {year} concert list
         </title>
-        <meta charSet="UTF-8" />
         <meta
           property="og:title"
           content={`Grateful Dead ${year} concert list`}
@@ -56,8 +56,6 @@ Year.propTypes = {
 };
 
 export async function getStaticPaths() {
-  // Define range of years to show
-  const yrs = [...Array(28).keys()].map((i) => String(i + 68));
   const paths = yrs.map((yr) => ({
     params: { yr },
   }));

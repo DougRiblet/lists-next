@@ -2,6 +2,12 @@
 body {
   font-family: Ubuntu, Helvetica, Verdana, sans-serif;
   font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+body .layout-container {
+  margin: 0;
+  padding: 0;
 }
 body .container {
   max-width: 1000px;
@@ -15,14 +21,14 @@ body .container ul li {
   line-height: 1.5;
 }
 body .container ul li a {
-  color: darkgreen;
+  color: crimson;
   text-decoration: none;
 }
 body .container ul li a:hover {
-  color: forestgreen;
+  color: dodgerblue;
 }
 body .container .showhead {
-  background-color: darkgreen;
+  background-color: crimson;
   color: white;
   font-size: 14px;
   display: grid;
@@ -76,20 +82,25 @@ body .home-years ul li a {
   border-radius: 50%;
   font-size: 24px;
   color: white;
-  background-color: forestgreen;
+  background-color: crimson;
   text-decoration: none;
 }
 body .home-years ul li a:hover {
-  background-color: teal;
+  background-color: dodgerblue;
 }
 
 .archive {
-  border-top: 2px solid darkgreen;
+  border-top: 2px solid crimson;
   margin-top: 24px;
   padding-top: 24px;
   font-size: 12px;
   display: grid;
   grid-template-columns: 1fr 2fr;
+}
+
+header {
+  margin: 0;
+  padding: 0;
 }
 
 nav {
@@ -100,8 +111,9 @@ nav {
 }
 nav .nbar {
   max-width: 1000px;
-  margin: 24px auto;
-  padding: 6px;
+  margin: 0 auto;
+  padding: 6px 60px;
+  color: white;
   font-size: 24px;
   text-align: right;
 }

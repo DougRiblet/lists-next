@@ -14,7 +14,6 @@ function Show({
         <title>
           Grateful Dead set list | {date} | {city}
         </title>
-        <meta charSet="UTF-8" />
         <meta
           property="og:title"
           content={`Grateful Dead set list | ${date} | ${city}`}

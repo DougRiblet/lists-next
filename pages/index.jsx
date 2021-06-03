@@ -1,35 +1,33 @@
 import Link from 'next/link';
 import Head from 'next/head';
-import Navbar from '../utils/Navbar';
-
-const yrs = [...Array(28).keys()].map((i) => String(i + 68));
+import yrs from '../utils/defineYears';
+import Layout from '../components/layout';
 
 function HomePage() {
   return (
-    <div className="home-years">
+    <Layout home>
       <Head>
         <title>
-          Grateful Dead set lists
+          DeadQL | Grateful Dead set lists
         </title>
         <meta
           property="og:title"
-          content="Grateful Dead set lists"
+          content="DeadQL | Grateful Dead set lists"
           key="title"
         />
-        <meta charSet="UTF-8" />
       </Head>
-      <Navbar />
-      <ul>
-        {yrs.map((yr) => (
-          <li key={yr}>
-            <Link href={`/${yr}`}>
-              <a>{yr}</a>
-            </Link>
-          </li>
-        ))}
-      </ul>
-
-    </div>
+      <div className="home-years">
+        <ul>
+          {yrs.map((yr) => (
+            <li key={yr}>
+              <Link href={`/${yr}`}>
+                <a>{yr}</a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </Layout>
   );
 }
 
