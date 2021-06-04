@@ -18,29 +18,43 @@ function Year({ yearList, year }) {
           key="title"
         />
       </Head>
-      <div className="container">
-        <ul>
-          {yearList.map(({
-            date, city, site, school,
-          }) => (
-            <li key={date}>
-              <Link href={`/show/${date}`}>
-                <a>
-                  {date}
-                  {' '}
-                  |
-                  {' '}
-                  {site}
-                  {school ? ` - ${school}` : ''}
-                  {' '}
-                  |
-                  {' '}
-                  {city}
-                </a>
-              </Link>
-            </li>
-          ))}
-        </ul>
+
+      <div className="list-container">
+        <div className="home-years">
+          <ul>
+            {yrs.map((yr) => (
+              <li key={yr}>
+                <Link href={`/${yr}`}>
+                  <a>{yr}</a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="list-year">
+          <ul>
+            {yearList.map(({
+              date, city, site, school,
+            }) => (
+              <li key={date}>
+                <Link href={`/show/${date}`}>
+                  <a>
+                    {date}
+                    {' '}
+                    |
+                    {' '}
+                    {site}
+                    {school ? ` - ${school}` : ''}
+                    {' '}
+                    |
+                    {' '}
+                    {city}
+                  </a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </Layout>
   );

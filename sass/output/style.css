@@ -22,14 +22,14 @@ body .container ul li {
   line-height: 1.5;
 }
 body .container ul li a {
-  color: crimson;
+  color: #d24836;
   text-decoration: none;
 }
 body .container ul li a:hover {
-  color: dodgerblue;
+  color: #3672e2;
 }
 body .container .showhead {
-  background-color: crimson;
+  background-color: #d24836;
   color: white;
   font-size: 14px;
   display: grid;
@@ -59,44 +59,17 @@ body .container .container-sets .setcol p.set-header {
 body .container .container-sets .setcol ul {
   list-style-type: none;
   padding-left: 0;
+  margin-bottom: 0;
 }
 body .container .container-sets .setcol ul li {
   line-height: 1.5;
 }
 body .container .container-sets .setcol ul.encore-list {
-  margin-top: 30px;
-}
-body .home-years {
-  width: 700px;
-  margin: 24px auto 200px;
-}
-body .home-years:before, body .home-years:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-body .home-years ul {
-  margin: 10px;
-  list-style-type: none;
-}
-body .home-years ul li a {
-  display: block;
-  float: left;
-  padding: 20px;
-  margin: 10px;
-  border: none;
-  border-radius: 50%;
-  font-size: 24px;
-  color: white;
-  background-color: crimson;
-  text-decoration: none;
-}
-body .home-years ul li a:hover {
-  background-color: dodgerblue;
+  margin: 20px 0px;
 }
 
 .archive {
-  border-top: 2px solid crimson;
+  border-top: 2px solid #d24836;
   margin-top: 24px;
   padding-top: 24px;
   font-size: 12px;
@@ -124,7 +97,7 @@ header, footer {
   text-decoration: none;
 }
 .nbar .logo-ql {
-  color: crimson;
+  color: #d24836;
 }
 
 .fbar {
@@ -134,6 +107,55 @@ header, footer {
   color: #bbbbbb;
   font-size: 12px;
   text-align: left;
+}
+
+.list-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.list-container .home-years {
+  margin: 24px;
+}
+.list-container .home-years:before, .list-container .home-years:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.list-container .home-years ul {
+  margin: 10px;
+  list-style-type: none;
+}
+.list-container .home-years ul li a {
+  display: block;
+  float: left;
+  padding: 8px;
+  margin: 8px;
+  border: none;
+  border-radius: 50%;
+  font-size: 12px;
+  color: white;
+  background-color: #d24836;
+  text-decoration: none;
+}
+.list-container .home-years ul li a:hover {
+  background-color: #3672e2;
+}
+.list-container .list-year {
+  margin: 24px;
+}
+.list-container .list-year ul {
+  text-align: left;
+  list-style-type: none;
+}
+.list-container .list-year ul li {
+  line-height: 1.5;
+}
+.list-container .list-year ul li a {
+  color: black;
+  text-decoration: none;
+}
+.list-container .list-year ul li a:hover {
+  color: #d24836;
 }
 
 /*# sourceMappingURL=style.css.map */
