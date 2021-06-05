@@ -4,6 +4,7 @@ import Link from 'next/link';
 import prisma from '../../db/prisma';
 import handleSetList from '../../utils/handleSetList';
 import formatSets from '../../utils/formatSets';
+import formatShowHead from '../../utils/formatShowHead';
 import Layout from '../../components/layout';
 
 function Show({
@@ -22,18 +23,7 @@ function Show({
         />
       </Head>
       <div className="container">
-        <div className="showhead">
-          <div className="showdate">
-            {date}
-          </div>
-          <div className="showvenue">
-            {site}
-            {school ? ` - ${school}` : ''}
-          </div>
-          <div className="showcity">
-            {city}
-          </div>
-        </div>
+        {formatShowHead(date, site, school, city)}
         {formatSets(layout, sets)}
         <div className="archive">
           <div className="allcopies">

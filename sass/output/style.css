@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 body {
   font-family: Ubuntu, Helvetica, Verdana, sans-serif;
   font-size: 16px;
@@ -156,6 +157,22 @@ header, footer {
 }
 .list-container .list-year ul li a:hover {
   color: #d24836;
+}
+
+.show-head {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  background-color: #dddddd;
+  border-left: 5px solid #d24836;
+  margin: 30px 0px;
+}
+.show-head .show-date {
+  padding: 10px;
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 24px;
+}
+.show-head .show-place {
+  padding: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
