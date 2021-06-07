@@ -14,7 +14,8 @@
     "build": "next build",
     "start": "next start",
     "sass": "sass sass/style.scss sass/output/style.css",
-    "lint": "eslint --ext .jsx,.js utils pages db"
+    "lint": "eslint --ext .jsx,.js utils pages db",
+    "export": "next build && next export"
   },
   "license": "ISC",
   "dependencies": {
