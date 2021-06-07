@@ -23,27 +23,24 @@ export function formatShowHead(date, site, school, city) {
   return (
     <div className="show-head">
       <div className="show-date">
-        {year}
-        <br />
-        {month}
-        {' '}
-        {day}
+        <p>
+          {month} {day}, {year}
+        </p>
       </div>
       <div className="show-place">
-        {site}
-        <br />
+        <p>
+          {site}
+        </p>
         {school && (
-          <span>
+          <p>
             {school}
-            <br />
-          </span>
+          </p>
         )}
-        {city}
       </div>
-      <div className="show-extra">
-        {extra && (
-          <h1>{extra}</h1>
-        )}
+      <div className="show-city">
+        <p>
+          {city}
+        </p>
       </div>
     </div>
   );
