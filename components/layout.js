@@ -6,6 +6,7 @@ export default function Layout({ children, home }) {
     <div className="layout-container">
       <Head>
         <meta charSet="UTF-8" key="charset" />
+        <link rel="shortcut icon" href="/stealie-favicon.ico" />
       </Head>
       <header>
         {home ? (
