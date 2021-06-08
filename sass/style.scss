@@ -57,12 +57,12 @@ body {
 }
 
 .archive {
-  border-top: 2px solid $dq-red;
+  border-top: 2px solid #999999;
   margin-top: 24px;
   padding-top: 24px;
   font-size: 12px;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: auto 500px;
 }
 
 header, footer {
