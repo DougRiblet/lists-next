@@ -28,7 +28,14 @@ export default function Layout({ children, home }) {
       </main>
       <footer>
         <div className="fbar">
-          Not affiliated with the Grateful Dead organization in any way.
+          <div className="notaff">
+            Not affiliated with the Grateful Dead organization in any way.
+          </div>
+          <div className="contact">
+            Comments? Suggestions? Errors?
+            <br />
+            DeadQL2021 (AT) gmail com
+          </div>
         </div>
       </footer>
     </div>
