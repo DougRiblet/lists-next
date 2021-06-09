@@ -26,7 +26,7 @@ function Show({
       <div className="container">
         {formatShowHead(date, site, school, city)}
         {formatSets(layout, sets)}
-        {formatArchive(archlinks, archtop, date)}
+        {/* {formatArchive(archlinks, archtop, date)} */}
       </div>
     </Layout>
   );

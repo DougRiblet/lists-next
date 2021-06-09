@@ -9,6 +9,9 @@ body {
   padding: 0;
   margin: 0;
   .layout-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
   }
@@ -57,19 +60,33 @@ body {
 }
 
 .archive {
-  border-top: 2px solid #999999;
+  max-width: 1000px;
   margin-top: 24px;
   padding-top: 24px;
   font-size: 12px;
   display: grid;
   grid-template-columns: auto 500px;
+  column-gap: 40px;
 }
 
-header, footer {
+header {
   margin: 0;
   padding: 0;
   width: 100%;
   background-color: #333955;
+  flex-shrink: 0;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #333955;
+  flex-shrink: 0;
 }
 
 .nbar {

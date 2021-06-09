@@ -1,5 +1,10 @@
 import Link from 'next/link';
 
+function stripArchlinkText(str, date) {
+  const regex = /^gd1?9?\d{2}-\d{2}-\d{2}\./;
+  return str.replace(regex, '');
+}
+
 function formatArchive(archlinks, archtop, date) {
   return (
     <div className="archive">
@@ -8,7 +13,7 @@ function formatArchive(archlinks, archtop, date) {
           {archlinks.length && archlinks.map((str) => (
             <li key={str}>
               <Link href={`https://archive.org/details/${str}`}>
-                <a>{str}</a>
+                <a>{stripArchlinkText(str, date)}</a>
               </Link>
             </li>
           ))}
