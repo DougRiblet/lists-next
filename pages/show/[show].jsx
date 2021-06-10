@@ -15,18 +15,22 @@ function Show({
     <Layout>
       <Head>
         <title>
-          Grateful Dead set list | {date} | {city}
+          Grateful Dead set list {date} in {city}
         </title>
         <meta
+          name="description"
+          content={`DeadQL | Grateful Dead set list ${date} in ${city}`}
+        />
+        <meta
           property="og:title"
-          content={`Grateful Dead set list | ${date} | ${city}`}
+          content={`Grateful Dead set list ${date} in ${city}`}
           key="title"
         />
       </Head>
       <div className="container">
         {formatShowHead(date, site, school, city)}
         {formatSets(layout, sets)}
-        {/* {formatArchive(archlinks, archtop, date)} */}
+        {formatArchive(archlinks, archtop, date)}
       </div>
     </Layout>
   );

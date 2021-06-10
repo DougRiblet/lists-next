@@ -11,12 +11,16 @@ function HomePage() {
           DeadQL | Grateful Dead set lists
         </title>
         <meta
+          name="description"
+          content="DeadQL | Grateful Dead set lists"
+        />
+        <meta
           property="og:title"
           content="DeadQL | Grateful Dead set lists"
           key="title"
         />
       </Head>
-      <div className="list-container">
+      <div className="container-home">
         <div className="home-years">
           <ul>
             {yrs.map((yr) => (
@@ -28,9 +32,12 @@ function HomePage() {
             ))}
           </ul>
         </div>
-        <div className="home-dql">
-          <h1>DeadQL</h1>
-        </div>
+        <h1>
+          DeadQL
+          <span className="subhead">
+            Grateful Dead set lists database
+          </span>
+        </h1>
       </div>
     </Layout>
   );

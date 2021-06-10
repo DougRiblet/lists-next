@@ -10,17 +10,21 @@ function Year({ yearList, year }) {
     <Layout>
       <Head>
         <title>
-          Grateful Dead {year} concert list
+        DeadQL | Grateful Dead set lists for ${year}
         </title>
         <meta
+          name="description"
+          content={`DeadQL | Grateful Dead set lists for ${year}`}
+        />
+        <meta
           property="og:title"
-          content={`Grateful Dead ${year} concert list`}
+          content={`DeadQL | Grateful Dead set lists for ${year}`}
           key="title"
         />
       </Head>
 
       <div className="list-container">
-        <div className="home-years">
+        <div className="side-years">
           <ul>
             {yrs.map((yr) => (
               <li key={yr}>
