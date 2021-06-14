@@ -16,7 +16,7 @@
     "sass": "sass sass/style.scss sass/output/style.css",
     "lint": "eslint --ext .jsx,.js utils pages db",
     "export": "next build && next export",
-    "test": "jest"
+    "test": "jest --no-watchman"
   },
   "license": "ISC",
   "dependencies": {
