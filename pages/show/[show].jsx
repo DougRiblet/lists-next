@@ -52,7 +52,7 @@ export async function getStaticPaths() {
   const showdates = await prisma.show.findMany({
     where: {
       date: {
-        gt: '680000',
+        gt: '660000',
       },
     },
     select: {
