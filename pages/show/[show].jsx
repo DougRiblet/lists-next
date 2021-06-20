@@ -19,7 +19,7 @@ function Show({
         </title>
         <meta
           name="description"
-          content={`DeadQL | Grateful Dead set list ${date} in ${city}`}
+          content={`DeadQL | Grateful Dead setlist ${date} in ${city}`}
         />
         <meta
           property="og:title"
