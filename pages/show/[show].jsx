@@ -15,7 +15,7 @@ function Show({
     <Layout>
       <Head>
         <title>
-          Grateful Dead concert {date} in {city}
+          Grateful Dead setlist {date} in {city}
         </title>
         <meta
           name="description"
