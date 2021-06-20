@@ -10,7 +10,7 @@ function Year({ yearList, year }) {
     <Layout>
       <Head>
         <title>
-        DeadQL | Grateful Dead set lists for ${year}
+          DeadQL | Grateful Dead set lists for ${year}
         </title>
         <meta
           name="description"

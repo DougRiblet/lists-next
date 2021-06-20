@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-function stripArchlinkText(str, date) {
+function stripArchlinkText(str) {
   const regex = /^gd1?9?\d{2}-\d{2}-\d{2}\./;
   return str.replace(regex, '');
 }
