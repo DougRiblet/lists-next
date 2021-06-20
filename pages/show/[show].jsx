@@ -23,7 +23,7 @@ function Show({
         />
         <meta
           property="og:title"
-          content={`Grateful Dead set list ${date} in ${city}`}
+          content={`Grateful Dead setlist ${date} in ${city}`}
           key="title"
         />
       </Head>
