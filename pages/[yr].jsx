@@ -28,7 +28,7 @@ function Year({ yearList, year }) {
           <ul>
             {yrs.map((yr) => (
               <li key={yr}>
-                <Link href={`/${yr}`}>
+                <Link href={`/${yr}.html`}>
                   <a>{yr}</a>
                 </Link>
               </li>
@@ -41,7 +41,7 @@ function Year({ yearList, year }) {
               date, city, site, school,
             }) => (
               <li key={date}>
-                <Link href={`/show/${date}`}>
+                <Link href={`/show/${date}.html`}>
                   <a>
                     {date}
                     {' '}

@@ -25,7 +25,7 @@ function HomePage() {
           <ul>
             {yrs.map((yr) => (
               <li key={yr}>
-                <Link href={`/${yr}`}>
+                <Link href={`/${yr}.html`}>
                   <a>{yr}</a>
                 </Link>
               </li>
