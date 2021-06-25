@@ -41,7 +41,7 @@ function Year({ yearList, year }) {
               date, city, site, school,
             }) => (
               <li key={date}>
-                <Link href={`/show/${date}.html`}>
+                <Link href={`/show/${date}`}>
                   <a>
                     {date}
                     {' '}
